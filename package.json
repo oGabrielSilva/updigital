@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "dev:backend": "nodemon",
-    "build:backend": "tsc -p server.tsconfig.json",
     "dev:client": "webpack -w",
+    "build:backend": "tsc -p server.tsconfig.json",
     "build:client": "webpack"
   },
   "devDependencies": {
