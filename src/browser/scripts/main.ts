@@ -1,3 +1,5 @@
-import { Test } from '../../models/Test';
 
-console.log(new Test());
+class Kallyne {
+    public constructor(private readonly coffe: string) {}
+}
+console.log(new Kallyne("j"));
