@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 <div>
   {% block header %}
-  <header>
-    <div>Coloca todo o html do header aqui.</div>
-    <div>
-      Pesquisem a documentação do Nunjucks para verem como colocar o header em um arquivo só dele.
-      Daí é só incluir ele aqui.
-    </div>
-  </header>
+  {% include './components/header.html' %}
+  {% endblock %}
+</div>
+<div>
+  {% block body %}
+    Sofrimento
   {% endblock %}
 </div>
