@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { resolve } from 'path';
+import nunjucks from 'nunjucks';
 import router from '../routes/routes';
 
 require('dotenv').config();
@@ -26,7 +27,17 @@ export class Server {
     this.app.use(router);
   }
 
+  private configureHTMLViewEngine() {
+    this.app.set('view engine', 'html');
+    nunjucks.configure(resolve(__dirname, '..', 'browser', 'templates'), {
+      autoescape: true,
+      express: this.app,
+      watch: true,
+    });
+  }
+
   public boot() {
+    this.configureHTMLViewEngine();
     this.useMiddlewares();
     this.useStaticFiles();
     this.useRoutes();

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title if title else "Up Digital" }}</title>
+    <script src="/public/scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <div>{% block header %} {% endblock %}</div>
+    <div>{% block body %} {% endblock %}</div>
+    <div>{% block footer %} {% endblock %}</div>
+  </body>
+</html>
