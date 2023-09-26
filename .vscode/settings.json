@@ -1,0 +1,83 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#a3a0ff"
+  },
+  "editor.rulers": [100],
+  "editor.fontSize": 13,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "git.autofetch": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.njk": "html"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Tokyo Night",
+  "explorer.confirmDelete": false,
+  "redhat.telemetry.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "material-icon-theme.folders.associations": {
+    "electron": "plugin",
+    "desktop": "vm",
+    "exception": "error",
+    "exceptions": "error",
+    "services": "job",
+    "service": "job",
+    "entities": "class",
+    "repositories": "shared",
+    "enum": "keys",
+    "enums": "keys",
+    "vo": "class",
+    "adapter": "resolver",
+    "generic": "base",
+    "tab": "Layout",
+    "main": "Serverless"
+  },
+  "material-icon-theme.files.associations": {
+    "adapter.js": "nodejs_alt",
+    "adapter.ts": "nodejs_alt"
+  },
+  "explorer.expandSingleFolderWorkspaces": true,
+  "RainbowBrackets.depreciation-notice": false,
+  "editor.minimap.enabled": false,
+  "git.openRepositoryInParentFolders": "always"
+}
