@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-<div>
-  {% block header %}
-  {% include './components/header.html' %}
-  {% endblock %}
-</div>
+<div>{% block header %} {% include './components/header.html' %} {% endblock %}</div>
 <div>
   {% block body %}
-    Welcome
+  <form action="" id="forms">
+    <label for=""> type here: </label>
+    <input type="text" id="getting" />
+    <button id="botao">botao</button>
+  </form>
   {% endblock %}
-</div>  
+</div>

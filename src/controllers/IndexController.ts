@@ -3,3 +3,4 @@ export class IndexController {
     res.render('index', {title: 'Sim'});
   }
 }
+
