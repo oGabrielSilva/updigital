@@ -1,5 +1,5 @@
 export class IndexController {
-  public static index(_: Req, res: Res) {
-    res.render('index');
+  public static index(req: Req, res: Res) {
+    res.render('index', {title: 'Sim'});
   }
 }
