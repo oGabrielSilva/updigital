@@ -5,4 +5,6 @@ const router = express.Router();
 
 router.get('/', IndexController.index);
 
+router.post('/page', IndexController.test);
+
 export default router;
