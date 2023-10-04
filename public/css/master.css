@@ -1,14 +1,33 @@
+:root {
+  --upPurple: #8c3f96;
+  --upPurpleRGB: rgb(140, 63, 150);
+  --upPurpleVariant: #4e0c58;
+  --upPurpleVariantRGB: rgb(143, 67, 154);
+  --colorOnPurple: #fefefe;
+
+  --primary: #fefefe;
+  --primaryDark: #e2e0e5;
+  --link: #102ec4;
+  --text: #1f1f1f;
+  --title: #202020;
+  --placeholder: #484848;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
   font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  border: none;
+  user-select: none;
 }
 
 body {
   background: transparent;
   font-size: 14px;
+  background: var(--primaryDark);
 }
 
 h1,
@@ -18,4 +37,58 @@ h4,
 h5,
 h6 {
   font-family: 'Poppins', sans-serif;
+  color: var(--title);
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 95%;
+  margin: 0 0 1rem 0;
+  background: var(--primaryDark);
+}
+
+input::placeholder {
+  color: var(--placeholder);
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+#lock {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, var(--upPurple), var(--upPurpleVariant));
+}
+
+#lock form {
+  width: 90%;
+  max-width: 520px;
+  background: var(--primary);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#lock h1 {
+  margin-bottom: 0.5rem;
+}
+
+#lock input:first-of-type {
+  margin-top: 0.5rem;
+}
+
+#lock button {
+  width: 95%;
+  background: var(--upPurple);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: var(--colorOnPurple);
+  border-radius: 8px;
+  margin-top: 1rem;
 }

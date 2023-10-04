@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 <div>
   {% block body %}
-  <div id="LoginContainer">
-    <form id="UserLogin">
-      <input type="text" id="user" placeholder="Usuário">
-      <input type="text" id="password" placeholder="Senha">
+  <main id="lock">
+    <form>
+      <h1>Aparelho bloqueado</h1>
+      <span>Realize o desbloqueio da máquina ao inserir as informações abaixo</span>
+      <input type="text" placeholder="Matrícula do coordenador" />
+      <input type="password" placeholder="Senha" />
+      <button>Desbloquear</button>
     </form>
-  </div>
+  </main>
   {% endblock %}
 </div>
