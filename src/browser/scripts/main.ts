@@ -1,12 +1,3 @@
-const getting = document.querySelector('#getting') as HTMLInputElement;
-const forms = document.querySelector('#forms');
+import { Main } from './modules/Main';
 
-if (forms)
-  forms.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch('/page', {
-      method: 'post',
-      body: JSON.stringify({ getting: getting.value }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-  });
+Main.boot();

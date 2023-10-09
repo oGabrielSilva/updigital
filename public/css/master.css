@@ -28,6 +28,7 @@ body {
   background: transparent;
   font-size: 14px;
   background: var(--primaryDark);
+  transition: 0.4s ease;
 }
 
 h1,
@@ -46,10 +47,17 @@ input {
   width: 95%;
   margin: 0 0 1rem 0;
   background: var(--primaryDark);
+  border: 2px solid transparent;
+  font-weight: bold;
 }
 
 input::placeholder {
   color: var(--placeholder);
+  font-weight: 400;
+}
+
+input:focus {
+  border: 2px solid var(--upPurple);
 }
 
 button {
@@ -73,6 +81,7 @@ button {
   padding: 3rem 1rem;
   text-align: center;
   border-radius: 8px;
+  box-shadow: 1px 1px 8px var(--title);
 }
 
 #lock h1 {
@@ -91,4 +100,20 @@ button {
   color: var(--colorOnPurple);
   border-radius: 8px;
   margin-top: 1rem;
+}
+
+#lock form button:hover {
+  background: var(--upPurpleVariant);
+}
+
+#lock #cb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#lock #cb input {
+  width: auto;
+  margin: 0;
 }
