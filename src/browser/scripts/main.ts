@@ -1,3 +1,9 @@
-import { Main } from './modules/Main';
+(class Main {
+  private readonly main = document.querySelector('main') as HTMLDivElement;
 
-Main.boot();
+  public static boot() {
+    const app = new Main();
+    if (!app.main || !app.main.id) return;
+    console.log(app.main);
+  }
+}).boot();
