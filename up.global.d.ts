@@ -6,4 +6,8 @@ export declare global {
     body: T;
   }
   interface Res extends Response {}
+
+  interface Controller {
+    boot: () => void;
+  }
 }
