@@ -63,7 +63,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Default Dark Modern",
   "explorer.confirmDelete": false,
   "redhat.telemetry.enabled": false,
   "editor.accessibilitySupport": "off",
