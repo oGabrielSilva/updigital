@@ -3,15 +3,19 @@
   {% block body %}
   <main id="lock">
     <form>
-      <h1 data-string="lockTitle"></h1>
-      <span>Realize o desbloqueio da máquina ao inserir as informações abaixo</span>
-      <input type="text" data-placeholder="registerPlaceholder" />
-      <input type="password" placeholder="Senha" />
+      <h1 data-string="lockTitle">{{ lockTitle }}</h1>
+      <span data-string="unlockRequest"></span>
+      <input
+        type="text"
+        data-placeholder="registerPlaceholder"
+        placeholder="{{ registerPlaceholder }}"
+      />
+      <input type="password" data-placeholder="password" placeholder="{{password}}" />
       <label id="cb">
         <input type="checkbox" />
-        <span>Manter desbloqueado</span>
+        <span data-string="keepUnlocked"> {{ keepUnlocked }}</span>
       </label>
-      <button>Desbloquear</button>
+      <button data-string="unlock">{{ unlock }}</button>
     </form>
   </main>
   {% endblock %}
