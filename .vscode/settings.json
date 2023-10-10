@@ -36,6 +36,18 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "[cpp]": {
+    "editor.tabSize": 2
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -55,6 +67,9 @@
   "explorer.confirmDelete": false,
   "redhat.telemetry.enabled": false,
   "editor.accessibilitySupport": "off",
+  "[python]": {
+    "editor.formatOnType": true
+  },
   "material-icon-theme.folders.associations": {
     "electron": "plugin",
     "desktop": "vm",
@@ -76,8 +91,13 @@
     "adapter.js": "nodejs_alt",
     "adapter.ts": "nodejs_alt"
   },
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
   "explorer.expandSingleFolderWorkspaces": true,
   "RainbowBrackets.depreciation-notice": false,
   "editor.minimap.enabled": false,
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "window.zoomLevel": -0.5
 }
