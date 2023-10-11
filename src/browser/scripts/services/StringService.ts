@@ -7,9 +7,9 @@ export class StringService extends Service {
     document.querySelectorAll<HTMLInputElement>('[data-placeholder]');
 
   public boot(): void {
-    this.dataString.forEach(element => {
-      element.textContent = (br as KeyToString)[element.dataset.string!];
-    });
+    this.dataString.forEach(
+      element => (element.textContent = (br as KeyToString)[element.dataset.string!])
+    );
     this.dataPlaceholder.forEach(element => {
       element.placeholder = (br as KeyToString)[element.dataset.placeholder!];
     });
