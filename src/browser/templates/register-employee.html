@@ -5,12 +5,10 @@
     <form>
       <h1 data-string="titleRegister">{{"titleRegister"}}</h1>
       <span data-string="registerMessenger"></span>
-      <input
-        type="text"
-        data-placeholder="registerPlaceholder"
-        placeholder="{{ registerPlaceholder }}"
-      />
+
+      <input type="text" data-placeholder="registerEmail" placeholder="{{ registerEmail}}" />
       <input type="password" data-placeholder="password" placeholder="{{password}}" />
+      <input type="username" data-placeholder="username" placeholder="{{ username}}" />
     </form>
   </main>
   {% endblock %}

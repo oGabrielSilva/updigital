@@ -5,7 +5,8 @@ export const br = {
   unlockRequest: 'Realize o desbloqueio da máquina ao inserir as informações abaixo',
   keepUnlocked: 'Manter desbloqueado',
   unlock: 'Desbloquear',
-  titleRegister: "Tela de Registro do colaborador",
-  registerMessenger: "Mensagem de registro",
-
+  titleRegister: 'Tela de Registro do colaborador',
+  registerMessenger: 'insira suas informações abaixo:',
+  registerEmail: 'Insira seu E-mail',
+  username: 'Insira seua nome',
 };
