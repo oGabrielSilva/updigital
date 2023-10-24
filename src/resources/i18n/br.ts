@@ -8,5 +8,5 @@ export const br = {
   titleRegister: 'Tela de Registro do colaborador',
   registerMessenger: 'insira suas informações abaixo:',
   registerEmail: 'Insira seu E-mail',
-  username: 'Insira seua nome',
+  username: 'Insira seu nome',
 };
