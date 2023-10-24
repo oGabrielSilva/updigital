@@ -1,5 +1,5 @@
 export class EmployeeController {
-  public static index(_: Req, res: Res) {
+  public static register(_: Req, res: Res) {
     res.render('register-employee');
   }
 }

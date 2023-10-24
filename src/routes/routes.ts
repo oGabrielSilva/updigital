@@ -1,10 +1,11 @@
 import express from 'express';
 import { IndexController } from '../controllers/IndexController';
 import adapter from './adapter';
+import { EmployeeController } from '../controllers/EmployeeController';
 
 const router = express.Router();
 
 router.get('/', adapter(IndexController.index));
-router.get('/register-employee', adapter(IndexController.index));
+router.get('/register-employee', adapter(EmployeeController.register));
 
 export default router;
