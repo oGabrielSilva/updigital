@@ -11,6 +11,7 @@
   --text: #1f1f1f;
   --title: #202020;
   --placeholder: #484848;
+  --danger: #f76c6c;
 }
 
 * {
@@ -116,4 +117,8 @@ button {
 #lock #cb input {
   width: auto;
   margin: 0;
+}
+
+.inputError {
+  border-color: var(--danger) !important;
 }
