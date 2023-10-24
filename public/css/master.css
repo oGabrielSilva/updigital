@@ -122,3 +122,7 @@ button {
 .inputError {
   border-color: var(--danger) !important;
 }
+
+.dNone {
+  display: none !important;
+}

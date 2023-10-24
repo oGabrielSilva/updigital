@@ -7,6 +7,7 @@ export const br = {
   unlock: 'Desbloquear',
   titleRegister: 'Tela de Registro do colaborador',
   registerMessenger: 'insira suas informações abaixo:',
-  registerEmail: 'Insira seu E-mail',
-  username: 'Insira seu nome',
+  registerEmail: 'Insira o E-mail do colaborador',
+  username: 'Insira o Nome do colaborador',
+  numberEmployee: 'Insira seu telefone pessoal',
 };
