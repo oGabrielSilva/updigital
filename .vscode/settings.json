@@ -99,5 +99,5 @@
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
   "code-runner.clearPreviousOutput": true,
   "code-runner.runInTerminal": true,
-  "window.zoomLevel": -0.5
+  "window.zoomLevel": -1
 }
