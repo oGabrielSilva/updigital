@@ -9,7 +9,7 @@ export class LockController extends Controller {
   private readonly regex = /\d{8}/;
 
   public boot() {
-    this.form.addEventListener('submit', e => {
+    this.form.addEventListener('submit', async e => {
       e.preventDefault();
       const register = this.registerInput.value;
       const password = this.passwordInput.value;
@@ -17,8 +17,6 @@ export class LockController extends Controller {
 
       const regIsValid = this.regex.test(register) && register.length === 8;
       const passIsValid = password.length >= 8;
-      console.log(`Register:`, regIsValid);
-      console.log(`Password:`, passIsValid);
       if (!regIsValid) {
         this.registerInput.focus();
         this.registerInput.classList.add(CSSInputError);
@@ -29,6 +27,18 @@ export class LockController extends Controller {
         this.passwordInput.classList.add(CSSInputError);
         return;
       } else this.passwordInput.classList.remove(CSSInputError);
+
+      const body = JSON.stringify({
+        register,
+        password,
+        keepUnlocked: checked,
+      });
+      const res = await fetch('/lock', {
+        method: 'post',
+        body,
+        headers: { 'Content-Type': 'application/json' },
+      });
+      console.log(res);
     });
   }
 }
