@@ -34,6 +34,9 @@ export class LockController extends Controller {
         password,
         keepUnlocked: checked,
       });
+
+      const res = await RequestApp.makeRequest('POST', body);
+      console.log(res);
     });
   }
 }
