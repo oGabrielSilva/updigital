@@ -1,4 +1,4 @@
-import { KeyToString, Service } from './base/Service';
+import { Service } from './base/Service';
 import { br } from '../../../resources/i18n/br';
 
 export class StringService extends Service {

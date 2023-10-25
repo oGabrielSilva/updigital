@@ -28,17 +28,11 @@ export class LockController extends Controller {
         return;
       } else this.passwordInput.classList.remove(CSSInputError);
 
-      const body = JSON.stringify({
-        register,
-        password,
-        keepUnlocked: checked,
-      });
-      const res = await fetch('/lock', {
-        method: 'post',
-        body,
-        headers: { 'Content-Type': 'application/json' },
-      });
-      console.log(res);
+      // const body = JSON.stringify({
+      //   register,
+      //   password,
+      //   keepUnlocked: checked,
+      // });
     });
   }
 }

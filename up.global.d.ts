@@ -6,4 +6,7 @@ export declare global {
     body: T;
   }
   interface Res extends Response {}
+  interface KeyToString {
+    [key: string]: string;
+  }
 }
