@@ -11,7 +11,7 @@ export class RequestApp {
       body,
       headers: headers ? { ...h, ...headers } : h,
     });
-
+    if (response.status === 204 || !response.body) return { response, json: {} };
     const json = await response.json();
     return { response, json };
   }

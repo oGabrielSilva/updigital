@@ -15,7 +15,7 @@ export class IndexController {
   public static lock(req: Req<LockInterface>, res: Res) {
     const { keepUnlocked, password, register } = req.body;
     if (
-      typeof keepUnlocked !== 'boolean' ||
+      typeof keepUnlocked === 'boolean' ||
       !password ||
       typeof password !== 'string' ||
       !register ||
