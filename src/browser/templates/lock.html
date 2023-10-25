@@ -3,19 +3,19 @@
   {% block body %}
   <main id="lock">
     <form>
-      <h1 data-string="lockTitle">{{ lockTitle }}</h1>
+      <h1 data-string="lockTitle">{{ strings.lockTitle }}</h1>
       <span data-string="unlockRequest"></span>
       <input
         type="text"
         data-placeholder="registerPlaceholder"
-        placeholder="{{ registerPlaceholder }}"
+        placeholder="{{ strings.registerPlaceholder }}"
       />
-      <input type="password" data-placeholder="password" placeholder="{{password}}" />
+      <input type="password" data-placeholder="password" placeholder="{{strings.password}}" />
       <label id="cb">
         <input type="checkbox" />
-        <span data-string="keepUnlocked"> {{ keepUnlocked }}</span>
+        <span data-string="keepUnlocked"> {{ strings.keepUnlocked }}</span>
       </label>
-      <button data-string="unlock">{{ unlock }}</button>
+      <button data-string="unlock">{{ strings.unlock }}</button>
     </form>
   </main>
   {% endblock %}
