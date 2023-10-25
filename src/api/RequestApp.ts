@@ -1,17 +1,13 @@
-import { Service } from './base/Service';
+import { API_HEADER_KEY_LANG_NAME } from '../resources/constants/constants';
 
-import { API_HEADER_KEY_LANG_NAME } from '../../../resources/constants/constants';
-
-export class APIService extends Service {
-  public boot(): void {}
-
-  public async request(body: string, headers?: HeadersInit) {
+export class RequestApp {
+  public static async makeRequest(method: RequestMethod, body: string, headers?: HeadersInit) {
     const h = {
       'Content-Type': 'application/json',
     };
     (h as KeyToString)[API_HEADER_KEY_LANG_NAME] = 'pt';
     const response = await fetch('/lock', {
-      method: 'post',
+      method,
       body,
       headers: headers ? { ...h, ...headers } : h,
     });

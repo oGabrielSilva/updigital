@@ -1,4 +1,4 @@
-import type { Request, Response } from 'express';
+import type { NextFunction, Request, Response } from 'express';
 
 export declare global {
   type EmptySuccessStatus = void;
@@ -6,7 +6,10 @@ export declare global {
     body: T;
   }
   interface Res extends Response {}
+  type Next = NextFunction;
   interface KeyToString {
     [key: string]: string;
   }
+
+  type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 }

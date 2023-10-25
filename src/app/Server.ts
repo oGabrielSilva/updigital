@@ -4,6 +4,7 @@ import express from 'express';
 import { resolve } from 'path';
 import nunjucks from 'nunjucks';
 import router from '../routes/routes';
+import { AppStringMiddleware } from '../middlewares/AppStringMiddleware';
 
 require('dotenv').config();
 
@@ -36,10 +37,15 @@ export class Server {
     });
   }
 
+  private useCustomMiddlewares() {
+    this.app.use(new AppStringMiddleware().resolve);
+  }
+
   public boot() {
     this.configureHTMLViewEngine();
     this.useMiddlewares();
     this.useStaticFiles();
+    this.useCustomMiddlewares();
     this.useRoutes();
     this.app.listen(this.port, () => console.log(`App listening on http://127.0.0.1:${this.port}`));
   }

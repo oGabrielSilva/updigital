@@ -21,7 +21,7 @@ export class IndexController {
       !register ||
       typeof register !== 'string'
     )
-      return new BadRequestException();
+      throw new BadRequestException();
     res.status(204).end();
   }
 }

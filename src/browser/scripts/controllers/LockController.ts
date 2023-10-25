@@ -1,3 +1,4 @@
+import { RequestApp } from '../../../api/RequestApp';
 import { CSSInputError } from '../../../resources/constants/constants';
 import { Controller } from './base/Controller';
 
@@ -28,11 +29,11 @@ export class LockController extends Controller {
         return;
       } else this.passwordInput.classList.remove(CSSInputError);
 
-      // const body = JSON.stringify({
-      //   register,
-      //   password,
-      //   keepUnlocked: checked,
-      // });
+      const body = JSON.stringify({
+        register,
+        password,
+        keepUnlocked: checked,
+      });
     });
   }
 }
