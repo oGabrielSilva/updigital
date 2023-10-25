@@ -9,5 +9,5 @@ export const br = {
   registerMessenger: 'insira suas informações abaixo:',
   registerEmail: 'Insira o E-mail do colaborador',
   username: 'Insira o Nome do colaborador',
-  numberEmployee: 'Insira seu telefone pessoal',
+  numberEmployee: 'Insira o telefone do colaborador',
 };
