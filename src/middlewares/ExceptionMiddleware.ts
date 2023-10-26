@@ -20,6 +20,7 @@ export class ExceptionMiddleware {
             Date.now()
           )
         );
+    console.log(err);
     next();
   }
 }
