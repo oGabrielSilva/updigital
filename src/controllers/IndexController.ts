@@ -9,7 +9,7 @@ interface LockInterface {
 export class IndexController {
   public static index(req: Req, res: Res) {
     //res.render('index', { title: 'Sim' });
-    res.render('lock');
+    return res.render('lock');
   }
 
   public static lock(req: Req<LockInterface>, res: Res) {
@@ -22,6 +22,6 @@ export class IndexController {
       typeof register !== 'string'
     )
       throw new BadRequestException();
-    res.status(204).end();
+    return res.status(204).end();
   }
 }

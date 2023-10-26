@@ -1,7 +1,7 @@
 import { API_HEADER_KEY_LANG_NAME } from '../resources/constants/constants';
 
 export class RequestApp {
-  public static async makeRequest(
+  public static async makeRequest<T = unknown>(
     path: string,
     method: RequestMethod,
     body: string,
@@ -17,7 +17,7 @@ export class RequestApp {
       headers: headers ? { ...h, ...headers } : h,
     });
     if (response.status === 204 || !response.body) return { response, json: {} };
-    const json = await response.json();
+    const json = (await response.json()) as T;
     return { response, json };
   }
 }

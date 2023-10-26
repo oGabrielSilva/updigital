@@ -7,12 +7,19 @@ export class ExceptionMiddleware {
     if (err instanceof InternalServerErrorException)
       res
         .status(err.status)
-        .json(new ResponseBody(true, null, err.causedBy, err.status, err.timestamp))
-        .end();
+        .json(new ResponseBody(true, null, err.causedBy, err.status, err.timestamp));
     else
       res
         .status(HTTPStatus.INTERNAL_SERVER_ERROR)
-        .json(new ResponseBody(true, null, '', HTTPStatus.INTERNAL_SERVER_ERROR, Date.now()));
+        .json(
+          new ResponseBody(
+            true,
+            null,
+            res.locals.strings?.internalServerExceptionDefaultMessage || '',
+            HTTPStatus.INTERNAL_SERVER_ERROR,
+            Date.now()
+          )
+        );
     next();
   }
 }
