@@ -1,4 +1,5 @@
 import { BadRequestException } from '../exceptions/BadRequestException';
+import { APP_COOKIE_KEY_LOCKED_DEVICE } from '../resources/constants/constants';
 import { AuthService } from '../services/AuthService';
 
 interface LockInterface {
@@ -11,8 +12,7 @@ export class IndexController {
   private static readonly auth = new AuthService();
 
   public static index(req: Req, res: Res) {
-    //res.render('index', { title: 'Sim' });
-    return res.render('lock');
+    res.render('index');
   }
 
   public static lock(req: Req<LockInterface>, res: Res) {
@@ -25,10 +25,7 @@ export class IndexController {
       typeof register !== 'string'
     )
       throw new BadRequestException('oie');
-    const token = IndexController.auth.generateToken(register, keepUnlocked);
-    const u = IndexController.auth.decryptData(token.token.split('.')[0]);
-    console.log(u);
-    console.log(token);
-    return res.status(204).end();
+    const { token } = IndexController.auth.generateToken(register, keepUnlocked);
+    return res.cookie(APP_COOKIE_KEY_LOCKED_DEVICE, token).status(204).end();
   }
 }

@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', adapter(IndexController.index));
 router.get('/register-employee', adapter(EmployeeController.register));
 
-// post
-router.post('/lock', adapter(IndexController.lock));
+// API
+router.post('/api/lock', adapter(IndexController.lock));
 
 export default router;

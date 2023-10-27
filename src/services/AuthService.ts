@@ -3,7 +3,7 @@ import crypto from 'crypto';
 interface AuthTokenPayload {
   register: string;
   createdAt: number;
-  keepUnklocked: boolean;
+  keepUnlocked: boolean;
 }
 
 export class AuthService {
@@ -48,7 +48,7 @@ export class AuthService {
       const payloadString = token.substring(encryptedPayload.length + 1);
       if (!encryptedPayload || !payloadString) return null;
       const decryptedPayload = this.decryptData(encryptedPayload);
-      const payload = JSON.parse(decryptedPayload);
+      const payload = JSON.parse(decryptedPayload) as AuthTokenPayload;
       if (payloadString !== JSON.stringify(payload)) return null;
       return payload;
     } catch (error) {

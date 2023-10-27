@@ -6,12 +6,17 @@ import nunjucks from 'nunjucks';
 import router from '../routes/routes';
 import { AppStringMiddleware } from '../middlewares/AppStringMiddleware';
 import { ExceptionMiddleware } from '../middlewares/ExceptionMiddleware';
+import { LockedDeviceMiddleware } from '../middlewares/LockedDeviceMiddleware';
+import { AuthService } from '../services/AuthService';
+import { APP_GLOBAL_AUTH_SERVICE } from '../resources/constants/constants';
 
 require('dotenv').config();
 
 export class Server {
   private readonly app = express();
   private readonly port = process.env.PORT ?? 3000;
+
+  private readonly authService = new AuthService();
 
   private constructor() {}
 
@@ -40,10 +45,15 @@ export class Server {
 
   private useCustomMiddlewares() {
     this.app.use(AppStringMiddleware.resolve);
+    this.app.use(LockedDeviceMiddleware.resolve);
   }
 
   private useExceptionMiddleware() {
     this.app.use(ExceptionMiddleware.resolve);
+  }
+
+  private setServices() {
+    this.app.set(APP_GLOBAL_AUTH_SERVICE, this.authService);
   }
 
   public boot() {
@@ -53,6 +63,7 @@ export class Server {
     this.useCustomMiddlewares();
     this.useRoutes();
     this.useExceptionMiddleware();
+    this.setServices();
     this.app.listen(this.port, () => console.log(`App listening on http://127.0.0.1:${this.port}`));
   }
 

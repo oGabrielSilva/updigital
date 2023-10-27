@@ -35,7 +35,7 @@ export class LockController extends Controller {
         keepUnlocked: checked,
       });
 
-      const res = await RequestApp.makeRequest('/lock', 'POST', body);
+      const res = await RequestApp.makeRequest('/api/lock', 'POST', body);
       console.log(res);
     });
   }
